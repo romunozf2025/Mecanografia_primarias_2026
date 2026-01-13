@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecanografía para Niños</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-keyboard"></i> Mecanografía para Niños</h1>
+            <p class="subtitle">¡Aprende a escribir rápido y correctamente!</p>
+        </header>
+        
+        <div class="game-area">
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-value" id="level-display">1</div>
+                    <div class="stat-label">Nivel</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="word-count">1/10</div>
+                    <div class="stat-label">Palabras</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="score-display">0</div>
+                    <div class="stat-label">Puntuación</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="errors-display">0/4</div>
+                    <div class="stat-label">Errores</div>
+                </div>
+            </div>
+            
+            <div class="word-display">
+                <div class="word-to-type" id="current-word">casa</div>
+                <div class="word-hint" id="word-hint">Escribe la palabra que ves arriba</div>
+                <div class="level-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+            
+            <div class="error-display" id="error-display">
+                <div class="error-dot"></div>
+                <div class="error-dot"></div>
+                <div class="error-dot"></div>
+                <div class="error-dot"></div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-container">
+                    <span class="input-label">Escribe aquí:</span>
+                    <input type="text" id="word-input" placeholder="Escribe la palabra..." autocomplete="off" autofocus>
+                </div>
+                
+                <div class="feedback" id="feedback">
+                    ¡Comienza a escribir la palabra!
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="level-selector">
+                    <span>Nivel:</span>
+                    <div class="level-buttons" id="level-buttons">
+                        <!-- Los botones de nivel se generarán con JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn restart-btn" id="restart-btn">
+                        <i class="fas fa-redo"></i> Reiniciar
+                    </button>
+                    <button class="action-btn next-btn" id="next-btn" disabled>
+                        <i class="fas fa-arrow-right"></i> Siguiente
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> Instrucciones del juego</h3>
+            <ul>
+                <li>Escribe la palabra que se muestra en la pantalla</li>
+                <li>El juego te ayudará a corregir errores ortográficos</li>
+                <li>Tienes 4 intentos (errores) por nivel</li>
+                <li>Cada nivel tiene 10 palabras para practicar</li>
+                <li>Completa todos los niveles para convertirte en un experto en mecanografía</li>
+            </ul>
+        </div>
+        
+        <div class="game-over" id="game-over">
+            <h2><i class="fas fa-gamepad"></i> ¡Juego Terminado!</h2>
+            <p id="game-over-message">Has cometido 4 errores. ¡Inténtalo de nuevo!</p>
+            <button id="restart-game-btn">Reiniciar Nivel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
